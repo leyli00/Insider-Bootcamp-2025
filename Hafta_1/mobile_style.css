@@ -1,0 +1,182 @@
+/* Telefon için */
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+
+    /* Header */
+
+    .header {
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0px 15px;
+    }
+
+    .profile_img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .hamburger-img {
+        display: block;
+    }
+
+    .header-center,
+    .header h2 {
+        display: none;
+    }
+
+    /* Introduction */
+    .intro {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .intro-img {
+        height: 180px;
+        border-radius: 30px;
+    }
+
+    .intro-text {
+        width: 310px;
+        gap: 10px;
+    }
+
+    .intro-text p {
+        font-size: 16px;
+    }
+
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    /* Slider */
+
+    .main-characters {
+        padding: 20px;
+        height: 300px;
+    }
+
+    .main-char-header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .item {
+        width: 90px;
+        border-radius: 20px;
+    }
+
+    .slider-card-img {
+        width: 90px;
+        height: 80px;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .slider-card-text {
+        padding: 10px;
+    }
+
+    .slider-card-char-name {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .slider-card-char-real-name {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .slider-card-char-intro {
+        font-size: 7px;
+        margin-bottom: 5px;
+    }
+
+    /* Favori Sahne */
+
+    .fav-scene-main {
+        margin: 20px 10px;
+    }
+
+    #youtube-video {
+        width: 340px;
+        height: 200px;
+    }
+
+    .fav-scene-header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .fav-scene-video-text {
+        width: 340px;
+    }
+
+    .fav-scene-content-header {
+        font-size: 20px;
+    }
+
+    .fav-scene-episode {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .fav-scene-content-text {
+        font-size: 16px;
+    }
+
+
+    /* 1.Sezon Bölümleri */
+
+    .episodes-main {
+        margin: 10px 50px;
+    }
+
+    .episodes-section-header {
+        font-size: 24px;
+    }
+
+    .episodes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 220px);
+        gap: 10px;
+        max-height: calc((2 * 220px + 10px));
+    }
+
+    .episode-card {
+        width: 150px;
+    }
+
+    .episode-img {
+        width: 150px;
+        height: 120px;
+    }
+
+    .episode-text {
+        padding: 10px;
+    }
+
+    .episode-text-header {
+        font-size: 10px;
+    }
+
+    .episode-text-duration {
+        font-size: 7px;
+    }
+
+    .episode-paragraph {
+        font-size: 8px;
+        font-weight: 200;
+    }
+
+    .show-more-btn {
+        margin-top: 20px;
+    }
+
+
+    .show-more-btn img {
+        height: 30px;
+    }
+}
