@@ -90,6 +90,11 @@ html {
     font-weight: 400;
 }
 
+.intro h1 a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Slider */
 
 .main-characters {
