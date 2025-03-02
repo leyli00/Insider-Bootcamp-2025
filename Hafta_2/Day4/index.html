@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -22,6 +24,38 @@
             <input type="button" class="filter priority-btn" value="Priority">
             <input type="button" class="filter deleteAll-btn" value="Delete All">
         </div>
+
+        <div class="todo-list">
+
+        </div>
+
+        <div class="blur-effect">
+            <form class="task-form">
+                <label class="label-header-input ">
+                    Enter Title (required)
+                    <input type="text" class="task-header-input" required>
+                </label>
+                <label class="label-textarea">
+                    Please write a description (optional)
+                    <textarea class="desc-textarea" cols="44" rows="6"></textarea>
+                </label>
+                <label class="importance-label">
+                    Importance (required)
+                    <section class="importance-section">
+                        <input type="radio" name="option" id="high" class="radio-input" value="High">
+                        <label for="high">High</label>
+                        <input type="radio" name="option" id="medium" class="radio-input" value="(Medium)">
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="option" id="low" class="radio-input" value="Low">
+                        <label for="low">Low</label>
+                    </section>
+                </label>
+                <button type="submit" class="create-btn">Create</button>
+            </form>
+        </div>
+
+
+
     </main>
 
 
