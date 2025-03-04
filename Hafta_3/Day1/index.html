@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statik JSON ile Öğrenci Listesi</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2>Öğrenci Listesi</h2>
+
+    <input type="text" id="studentName" placeholder="Öğrenci Adı">
+    <input type="text" id="studentDepartment" placeholder="Bölüm">
+    <button id="addStudent">Ekle</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ad, Soyad</th>
+                <th>Bölüm</th>
+                <th>Öğrenciyi Sil</th>
+            </tr>
+        </thead>
+        <tbody id="students"></tbody>
+    </table>
+
+    <script>
+        var studentData = [
+            { "id": 1, "name": "Elif Demir", "department": "Biyoloji" },
+            { "id": 2, "name": "Ahmet Yılmaz", "department": "Matematik" },
+            { "id": 3, "name": "Hasan Yücel", "department": "Bilgisayar Mühendisliği" }
+        ];
+
+        function renderTable() {
+            $("#students").empty();
+            studentData.forEach(function (student, index) {
+                $("#students").append(
+                    `<tr data-id="${student.id}">
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td>${student.department}</td>
+                        <td class="delete-btn" data-index="${index}">Sil</td>
+                    </tr>`
+                );
+            });
+        }
+
+        $(document).ready(function () {
+            renderTable();
+
+            $("#addStudent").click(function () {
+                var name = $("#studentName").val().trim();
+                var studentDepartment = $("#studentDepartment").val().trim();
+
+                if (name && studentDepartment) {
+                    var newStudent = {
+                        id: studentData.length + 1,
+                        name: name,
+                        class: studentDepartment
+                    };
+                    studentData.push(newStudent);
+                    renderTable();
+                    $("#studentName, #studentDepartment").val("");
+                }
+            });
+
+            $(document).on("click", ".delete-btn", function () {
+                var index = $(this).data("index");
+                studentData.splice(index, 1);
+                renderTable();
+            });
+
+            $(document).on("click", "tr", function () {
+                $(this).toggleClass("highlight");
+            });
+        });
+    </script>
+</body>
+
+</html>
