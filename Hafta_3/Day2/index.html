@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        #post_title {
+            font-size: 25px;
+        }
+
+        #post_body {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Postlar</h1>
+    <ul id="postList">
+
+    </ul>
+
+
+    <script>
+        load = false;
+        limit = 8;
+        start = 0;
+        function getPost() {
+            if (load) return;
+            load = true;
+            $.get(`https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${limit}`)
+                .then(function (posts) {
+                    posts.forEach((post) => {
+                        $("#postList").append(
+                            `<li id=li><span id=post_title> ${post.title}</span><p id=post_body> ${post.body}</p>`
+                        )
+                    })
+                    start += limit;
+                    load = false;
+                })
+                .fail(function () {
+                    console.log("veriler yüklenemedi");
+                    loading = false;
+                }
+                )
+        }
+
+
+
+
+        $(document).ready(function () {
+            getPost();
+
+            $(window).on("scroll", function () {
+                let scrollTop = $(window).scrollTop();
+                let windowHeight = $(window).height();
+                let documentHeight = $(document).height();
+
+                if (scrollTop + windowHeight >= documentHeight - 50) {
+                    getPost();
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
