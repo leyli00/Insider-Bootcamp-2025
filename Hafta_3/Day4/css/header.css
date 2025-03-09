@@ -1,0 +1,139 @@
+/*------------------ HEADER ----------------------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.brand-image img {
+    width: 140px;
+    user-select: none;
+
+}
+
+.search-box {
+    width: 50%;
+    padding: 0px 40px;
+    position: relative;
+
+}
+#search-box-input {
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    border: 0px;
+    background-color: #e4e4e4;
+    padding: 0px 20px ;
+    font-size: 15px;
+    font-weight: 500;
+    outline-width: 1px;
+    outline-color: rgb(255, 174, 0);
+}
+#search-box-image{
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 6px;
+    user-select: none;
+
+}
+
+
+.basket-favorite-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#favorite-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+
+}
+.favorite-box-text {
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+#basket-box{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.basket-box-text {
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+/*------------------------------------------------------------- */
+
+/*-------------------------- BASKET DETAIL --------------------------*/
+
+.basket-sidebar{
+    width: 300px;
+    background-color: #b9b9b9;
+    height: 80vh;
+    position: absolute;
+    top: 70px;
+    right: -80px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgb(77, 77, 77);
+}
+
+.basket-sidebar-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.basket-sidebar-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 89%;
+    overflow-y: scroll;
+    
+}
+
+.basket-sidebar-card {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+.basket-sidebar-card-image {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.basket-sidebar-card-title{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.basket-sidebar-card-price{
+    font-size: 12px;
+    color: red;
+    margin-bottom: 8px;
+}
+.basket-sidebar-card-section{
+
+}
+/*------------------------------------------------------------------ */
+
+
