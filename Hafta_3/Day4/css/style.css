@@ -11,11 +11,18 @@ body {
 
 
 /*------------------ PRODUCT CARDS ----------------------------------- */
-.product-cards {
+/* .product-cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 25px;
+} */
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
 }
 
 .product-card {
@@ -62,9 +69,9 @@ body {
     height: 350px;
 }
 
+#slick-slide00,
 #slick-slide01,
-#slick-slide02,
-#slick-slide03 {
+#slick-slide02 {
     display: flex;
     justify-content: center;
 }

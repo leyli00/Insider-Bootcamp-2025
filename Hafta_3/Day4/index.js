@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    $("#search-box-input").on("keyup", function () {
+        let value = $(this).val().toLowerCase();
+        $(".product-card").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+
+
     // carousel ekler
     $('.carousel').slick({
         dots: true,       // Navigasyon noktaları
@@ -7,7 +16,7 @@ $(document).ready(function () {
         speed: 500,       // Geçiş süresi
         slidesToShow: 1,  // Aynı anda gösterilecek slayt sayısı
         autoplay: true,   // Otomatik kaydırma
-        autoplaySpeed: 1000 // Otomatik geçiş süresi (2sn)
+        autoplaySpeed: 2000 // Otomatik geçiş süresi (2sn)
     });
 
     $.getJSON('https://fakestoreapi.com/products')

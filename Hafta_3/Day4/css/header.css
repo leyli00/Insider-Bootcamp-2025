@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.brand-h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.brand-h1 a {
+    text-decoration: none;
+    color: black;
+}
+
 .brand-image img {
     width: 140px;
     user-select: none;
@@ -19,19 +29,21 @@
     position: relative;
 
 }
+
 #search-box-input {
     width: 100%;
     border-radius: 10px;
     height: 40px;
     border: 0px;
     background-color: #e4e4e4;
-    padding: 0px 20px ;
+    padding: 0px 20px;
     font-size: 15px;
     font-weight: 500;
     outline-width: 1px;
     outline-color: rgb(255, 174, 0);
 }
-#search-box-image{
+
+#search-box-image {
     position: absolute;
     top: calc(50% - 12px);
     right: 6px;
@@ -55,17 +67,19 @@
     user-select: none;
 
 }
+
 .favorite-box-text {
     font-size: 16px;
     margin-left: 2px;
 }
 
-#basket-box{
+#basket-box {
     display: flex;
     align-items: center;
     cursor: pointer;
     user-select: none;
 }
+
 .basket-box-text {
     font-size: 16px;
     margin-left: 2px;
@@ -75,7 +89,7 @@
 
 /*-------------------------- BASKET DETAIL --------------------------*/
 
-.basket-sidebar{
+.basket-sidebar {
     width: 300px;
     background-color: #b9b9b9;
     height: 80vh;
@@ -95,14 +109,14 @@
     border-bottom: 2px solid gray;
 }
 
-.basket-sidebar-cards{
+.basket-sidebar-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 89%;
     overflow-y: scroll;
-    
+
 }
 
 .basket-sidebar-card {
@@ -114,26 +128,30 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    
+
 }
+
 .basket-sidebar-card-image {
-    width: 100%;
+    width: 100px;
     height: 110px;
     object-fit: contain;
     margin-right: 10px;
 }
-.basket-sidebar-card-title{
+
+.basket-sidebar-card-title {
     font-size: 14px;
     margin-bottom: 8px;
 }
-.basket-sidebar-card-price{
+
+.basket-sidebar-card-price {
     font-size: 12px;
     color: red;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.basket-sidebar-card-section{
 
-}
+.basket-sidebar-card-section {}
+
 /*------------------------------------------------------------------ */
-
-
