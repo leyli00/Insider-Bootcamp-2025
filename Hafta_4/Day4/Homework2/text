@@ -1,0 +1,12 @@
+ADIM 1
+
+Öncelikle arayüzü inceledim.Gözle görülür birkaç tane hata var.
+1. Aynı üründen sepete birden fazla ekleyince sepetin toplam değeri güncellenmiyor.
+2. Ürünlerin stokları var ama sepete stoktakinden daha fazla sayıda aynı üründen eklenebilir durumda.
+3. Sepetteki uygulanan indirimde sanırım 10 % luk bir indirim uygulanması gerekiyor ama ödenecek tutarı toplam ücretin 10 % 'u olarak gösteriyor.
+
+ADIM 2
+
+Kodları inceledim, yukarıda saydığım hataların olduğu fonsiyonlara "debugger" yerleştirdim.Kod çalıştığında "Yetersiz stok" hatası veren if koşuluna girmiyor. Koşulu şu şekilde (product.stock == 0) güncelledim, böylece ürünün stoğu 0 olduğunda hata mesajı verecek. 40.satıra şu (products[productId - 1].stock -= quantity;) kodu ekledim ki ürünlerin içindeki seçilen indeksteki stok her tıklandığında 1 azalsın.
+63.satırda sabit değer yerine şu(item.quantity) kısmı ekledim, bu şekilde sepettek, ürünler silinince stok güncelleniyor. Ama bu mevcut durumda sil butonuna tınlandığında değilde, diğer ürünlerin "Sepete ekle" butonuna tıklayınca güncelliyor. Sil butonuna tıklanınca stoğun güncellenmesi için "removeToCarts()" fonksiyonunu oluşturdum ve 109.satırdaki "Sil" butonunun onclick kısmını şu(app.removeToCarts(${item.productId})) şekilde güncelledim.
+82.satırdaki indirim kısmını (this.total *= 0.9;) böyle güncelledim böylelikle 10% indirim yapmış oldu.
